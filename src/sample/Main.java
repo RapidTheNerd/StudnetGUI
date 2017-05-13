@@ -46,8 +46,10 @@ public class Main extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 int idInput = Integer.parseInt(studentID.getText());//parsing it to an integer allows us to check if it's > 0
                 String courseInput = studentCourse.getText().toUpperCase(); //calling to upper case will mean that it doesn't care about capitals
+
+                Database.checkIfIsInAlready(idInput, courseInput); //checking if they're already in the database
+                
                 if(idInput < 0){
-                    System.out.println("ID is less than 0");
                     ErrorWindow.createErrorWindow("Error: ID can't be less than 0");
                 } else {
                     Database.addToList(idInput, courseInput);
