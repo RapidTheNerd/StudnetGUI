@@ -44,6 +44,7 @@ public class OneClass {
 
 
         displayFiled.setColumns(10);
+        displayFiled.setEditable(false);
         displayFiled.setSize(50, 50);
 
         mainWindow.setVisible(true);
