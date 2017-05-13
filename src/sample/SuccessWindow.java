@@ -20,7 +20,7 @@ public class SuccessWindow extends JFrame {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null); //setting this will make sure that the window is always on the centre of the screen
-        frame.setSize(100, 100); //needs adjusting
+        frame.setSize(200, 100); //needs adjusting
 
     }
 }

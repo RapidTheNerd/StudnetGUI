@@ -16,7 +16,8 @@ public class Main extends JFrame{
         JButton addButton = new JButton();
 
 
-
+        //all components whether it is a textfield or a button need to be added to a panel, the panel is then added to the frame
+        //although jframe has a add feature the components will show but wont function correctly.
         mainPanel.add(studentID);
         mainPanel.add(studentCourse);
         mainPanel.add(addButton);
@@ -37,8 +38,9 @@ public class Main extends JFrame{
         mainWindow.setVisible(true);
         mainWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         mainWindow.setLocationRelativeTo(null); //setting this will make sure that the window is always on the centre of the screen
-        mainWindow.setSize(250, 250); //needs adjusting
+        mainWindow.setSize(350, 250); //needs adjusting
 
+        //we need to read when the button is pressed so we call an action listener
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
