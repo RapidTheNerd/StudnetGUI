@@ -12,9 +12,16 @@ public class Main extends JFrame{
         JPanel mainPanel = new JPanel();
         final JTextField studentID = new JTextField(); //text fields are a bit of a pain in the ass to get int values out of
         //but there's a way we can do that
+        JButton addButton = new JButton();
+
+
 
         mainPanel.add(studentID);
+        mainPanel.add(addButton);
         mainWindow.add(mainPanel);//again these 2 need to be added for it to work
+
+        addButton.setText("Add entry");
+        addButton.setSize(20, 20);//change the size to your liking
 
         studentID.setColumns(10); // for some reason in Java the size of the textField is set in columns, not using setSize
         studentID.setSize(50, 50);
@@ -25,14 +32,10 @@ public class Main extends JFrame{
         mainWindow.setLocationRelativeTo(null); //setting this will make sure that the window is always on the centre of the screen
         mainWindow.setSize(250, 250); //needs adjusting
 
-        //here we're going to listen out for the users input and check if it's correct for the ID
-        studentID.addActionListener(new ActionListener() {
+        addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int idInput = Integer.parseInt(studentID.getText()); //parsing it to an integer allows us to check if it's > 0
-                if(idInput > 0){
-                    ErrorWindow.createErrorWindow("Error: ID can't be less than 0");
-                }
+                
             }
         });
     }
