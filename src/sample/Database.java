@@ -13,7 +13,8 @@ public class Database {
     }
     public static void checkIfIsInAlready(int id, String course){
         if(students.containsKey(id) && students.containsKey(course)){
-
+            ErrorWindow.createErrorWindow("Error: Student is already in the database");
+            //Here is where we allow the usage of the method below
         }
     }
 }
