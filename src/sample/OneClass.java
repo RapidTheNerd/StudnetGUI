@@ -59,7 +59,7 @@ public class OneClass {
         studentCourse.setColumns(10);
         studentCourse.setSize(50, 50);
 
-        displayFiled.setText("ID" + studentID + "Course: " + studentCourse);
+
         displayFiled.setColumns(10);
         displayFiled.setSize(50, 50);
 
@@ -84,6 +84,14 @@ public class OneClass {
                     createErrorFrame("Added student " + idInput + " On course " + courseInput);
                     //might as well make it a little bit fancy :p
                 }
+            }
+        });
+
+        displayButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                displayFiled.setText("ID: " + studentID.getText() + " " + "Course: " + studentCourse.getText());
             }
         });
     }
