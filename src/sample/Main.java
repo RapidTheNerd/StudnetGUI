@@ -35,7 +35,13 @@ public class Main extends JFrame{
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                
+                int idInput = Integer.parseInt(studentID.getText());//parsing it to an integer allows us to check if it's > 0
+                if(idInput < 0){
+                    System.out.println("ID is less than 0");
+                    ErrorWindow.createErrorWindow("Error: ID can't be less than 0");
+                } else {
+
+                }
             }
         });
     }
