@@ -18,6 +18,7 @@ public class Main extends JFrame{
 
 
         mainPanel.add(studentID);
+        mainPanel.add(studentCourse);
         mainPanel.add(addButton);
         mainWindow.add(mainPanel);//again these 2 need to be added for it to work
 
