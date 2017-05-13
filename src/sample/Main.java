@@ -48,6 +48,8 @@ public class Main extends JFrame{
                     ErrorWindow.createErrorWindow("Error: ID can't be less than 0");
                 } else {
                     Database.addToList(idInput, courseInput);
+                    SuccessWindow.createSuccessWindow("Added student " + idInput + " On course " + courseInput);
+                    //might as well make it a little bit fancy :p
                 }
             }
         });
